@@ -24,7 +24,7 @@
               <div class="card-body">
                 <div class="d-flex">
                   <p class="d-flex flex-column">
-                    <span class="text-bold text-lg">500</span>
+                    <span class="text-bold text-lg">{{allbooks}}</span>
                     <span>اجمالي عدد الكتب</span>
                   </p>  
                 </div>
@@ -176,15 +176,15 @@
                       <!-- /.col -->
                   <div class="col-sm-4">
                     <div class="description-block">
-                     {% if book.status == 'availble' %}
+                     {% if book.status == 'available' %}
                       <h5 class="description-header text-success">{{book.status}}</h5>
                       <span class="description-text">الحالة</span>
-                     {% elif book.status == 'rental' %}
-                      <h5 class="description-header text-warning">{{book.status}}</h5>
-                      <span class="description-text">الحالة</span>
-                      {% else %}
-                      <h5 class="description-header text-danger">{{book.status}}</h5>
-                       <span class="description-text">الحالة</span>
+                     {% elif book.status == 'retal' %}
+                     <h5 class="description-header text-warning">{{book.status}}</h5>
+                     <span class="description-text">الحالة</span>
+                     {% else %}
+                     <h5 class="description-header text-danger">{{book.status}}</h5>
+                     <span class="description-text">الحالة</span>
                      {% endif %}
                     </div>
                     <!-- /.description-block -->
