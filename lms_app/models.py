@@ -12,7 +12,8 @@ class Category(models.Model):
 class Book(models.Model):
 
   status_book = [
-    ('available', 'available'),
+    ('availabl', 'available'),
+    
     ('retal', 'retal'),
     ('sold', 'sold'),
   ]
