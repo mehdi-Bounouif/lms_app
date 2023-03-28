@@ -52,6 +52,45 @@
 <!--<script src="dist/js/pages/dashboard3.js'"></script>
 -->
 <script>
+
+$(document).ready(function(){
+  var total = 0;
+  $('.totalprice').each(function(){
+    $(this).hide()
+    var salary = $(this).text();
+    total += parseInt(salary);
+  })
+  $('#totalsalarys').text( '$' + total);
+})
+
+
+var totale1 = 0;
+$(".totalsold").each(function(){
+  $(this).hide()
+  var salary1 = $(this).text();
+  totale1 += parseInt(salary1);
+})
+$(".salarysold").text(totale1)
+$(".salarysold").hide();
+
+
+
+var totale2 = 0;
+$(".totalrental").each(function(){
+  $(this).hide()
+  var salary2 = $(this).text();
+  totale2 += parseInt(salary2);
+})
+$(".salaryrental").text(totale2) 
+$(".salaryrental").hide();
+
+
+
+$("#rentaldays").keyup(function(){
+  $("#totalrental").val($("#rentalprice").val()*$("#rentaldays").val());
+})
+
+
 $('#catinput').hide()
 $('#addcat').click(function(){
   $('#catinput').show()
@@ -119,14 +158,14 @@ $(function () {
           backgroundColor: '#007bff',
           borderColor    : '#007bff',
           data           : [ 
-               '50',
+               $(".salarysold").text(),
           ]
         },
         {
           backgroundColor: '#ced4da',
           borderColor    : '#ced4da',
           data           : [ 
-                '30',
+                $(".salaryrental").text(),
           ]
         }
       ]

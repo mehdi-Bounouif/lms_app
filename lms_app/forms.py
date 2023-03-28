@@ -21,7 +21,7 @@ class BookForm(forms.ModelForm):
       'price',
       'retal_price_day',
       'retal_period',
-      'total_rental',
+      'total_retal',
       'status',
       'Category',
 
@@ -33,9 +33,9 @@ class BookForm(forms.ModelForm):
       'photo_author': forms.FileInput(attrs={'class':'form-control'}),
       'pages': forms.NumberInput(attrs={'class':'form-control'}),
       'price': forms.NumberInput(attrs={'class':'form-control'}),
-      'retal_price_day': forms.NumberInput(attrs={'class':'form-control'}),
-      'retal_period': forms.NumberInput(attrs={'class':'form-control'}),
-      'total_rental': forms.NumberInput(attrs={'class':'form-control'}),
+      'retal_price_day': forms.NumberInput(attrs={'class':'form-control', 'id': 'rentalprice'}),
+      'retal_period': forms.NumberInput(attrs={'class':'form-control', 'id': 'rentaldays'}),
+      'total_retal': forms.NumberInput(attrs={'class':'form-control', 'id': 'totalrental'}),
       'status': forms.Select(attrs={'class':'form-control'}),
       'Category': forms.Select(attrs={'class':'form-control'}),
     }
