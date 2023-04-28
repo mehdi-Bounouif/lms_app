@@ -38,6 +38,7 @@ def books(request):
   context = {
     'category': Category.objects.all(),
     'books': search,
+    'formcat': CategoryForm(),
   }
   return render(request, 'pages/books.html' , context)
 
